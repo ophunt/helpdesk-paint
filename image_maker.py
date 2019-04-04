@@ -19,8 +19,7 @@ def make_image():
 				for t in range(scale):
 					pixels[10*i+s,10*j+t] = int(image_array[i][j])
 
-	img.save("image.png")
+	img.save("static/image.png")
 
 if __name__ == "__main__":
-	print("Content-type: text/html\n\n")
 	make_image()

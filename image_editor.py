@@ -13,9 +13,6 @@ def toggle(x, y):
 
 def main():
 	clear()
-	toggle(0,0)
-	for i in range(10):
-		toggle(i,9-i)
 
 	make_image()
 
