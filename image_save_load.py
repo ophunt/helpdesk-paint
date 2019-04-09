@@ -1,4 +1,5 @@
 import numpy as np
+import subprocess
 
 def load_image(path):
 	with open(path, "r") as image_file:
@@ -6,12 +7,7 @@ def load_image(path):
 		image_array = np.array(image_data).transpose()
 	return image_array
 
-def save_image_data(path, image_array):
+def save_image_data(image_array):
 	image_array = image_array.transpose()
-
-	save_string = ""
-	for row in image_array:
-		save_string += "".join(row) + "\n"
-
-	with open("image.data", "w") as image_file:
-		image_file.write(save_string)
+	save_string = ''.join(list(map(lambda s: ''.join(s), image_array)))
+	subprocess.call(["php", "image_save_data.php", "-q", save_string])
