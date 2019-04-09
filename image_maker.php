@@ -1,3 +1,4 @@
+#!/php_dir/php
 <?php
 
 $img = imagecreatetruecolor(100, 100);

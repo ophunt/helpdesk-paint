@@ -1,3 +1,4 @@
+#!/php_dir/php
 <?php
 
 $save_string = $argv[2];

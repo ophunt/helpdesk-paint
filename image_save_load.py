@@ -10,4 +10,4 @@ def load_image(path):
 def save_image_data(image_array):
 	image_array = image_array.transpose()
 	save_string = ''.join(list(map(lambda s: ''.join(s), image_array)))
-	subprocess.call(["php", "image_save_data.php", "-q", save_string])
+	subprocess.call(["./image_save_data.php", "-q", save_string])

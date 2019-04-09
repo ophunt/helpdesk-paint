@@ -6,7 +6,7 @@ def make_image():
 	image_array = load_image("image.data")
 	image_string = ''.join(list(map(lambda s: ''.join(s), image_array)))
 
-	subprocess.call(["php", "image_maker.php", "-q", image_string])
+	subprocess.call(["./image_maker.php", "-q", image_string])
 
 if __name__ == "__main__":
 	make_image()
