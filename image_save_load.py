@@ -6,7 +6,7 @@ def load_image(path):
 		image_array = np.array(image_data).transpose()
 	return image_array
 
-def save_image(path, image_array):
+def save_image_data(path, image_array):
 	image_array = image_array.transpose()
 
 	save_string = ""
